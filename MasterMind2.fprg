@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value="mastermind"/>
+        <attribute name="authors" value="abdel"/>
+        <attribute name="about" value="Board Game"/>
+        <attribute name="saved" value="2023-11-29 03:24:45 PM"/>
+        <attribute name="created" value="YWJkZWw7U1VOTlk7MjAyMy0wOS0yNjsxMjo1NDo1MSBQTTsyMjAz"/>
+        <attribute name="edited" value="YWJkZWw7U1VOTlk7MjAyMy0xMS0yOTswMzoyNDo0NSBQTTs1OzIzMTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kopie" type="Integer" array="False" size=""/>
+            <declare name="secretCode" type="Integer" array="False" size=""/>
+            <assign variable="secretcode[0]" expression="random(6)"/>
+            <declare name="code1" type="String" array="False" size=""/>
+            <assign variable="code1" expression="groen"/>
+            <declare name="code2" type="String" array="False" size=""/>
+            <assign variable="code2" expression="rood"/>
+            <declare name="code3" type="String" array="False" size=""/>
+            <assign variable="code" expression="oranje"/>
+            <declare name="code4" type="String" array="False" size=""/>
+            <assign variable="code4" expression="paars"/>
+            <declare name="code5" type="String" array="False" size=""/>
+            <assign variable="code5" expression="geel"/>
+            <declare name="code6" type="String" array="False" size=""/>
+            <assign variable="code6" expression="blauw"/>
+            <declare name="codemaker1" type="String" array="False" size=""/>
+            <assign variable="codemaker1" expression="code1"/>
+            <comment text="deze hele lijn is code maker"/>
+            <declare name="" type="Integer" array="False" size=""/>
+            <declare name="p1" type="String" array="False" size=""/>
+            <input variable="p1"/>
+            <assign variable="p1" expression="space1"/>
+            <declare name="" type="Integer" array="False" size=""/>
+            <declare name="codeAnt" type="Boolean" array="False" size=""/>
+            <if expression="p1==code1">
+                <then>
+                    <output expression="&quot;black&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="&quot;if code7 then true&quot;">
+                        <then/>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

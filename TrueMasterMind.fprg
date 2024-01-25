@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value="mastermind"/>
+        <attribute name="authors" value="abdel"/>
+        <attribute name="about" value="Board Game"/>
+        <attribute name="saved" value="2023-11-29 03:27:39 PM"/>
+        <attribute name="created" value="YWJkZWw7U1VOTlk7MjAyMy0wOS0yNjsxMjo1NDo1MSBQTTsyMjAz"/>
+        <attribute name="edited" value="YWJkZWw7U1VOTlk7MjAyMy0xMS0yOTswMzoyNzozOSBQTTs4MzsyMzcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="de codes zijn pionnen"/>
+            <declare name="code1" type="String" array="False" size=""/>
+            <assign variable="code1" expression="&quot;groen&quot;"/>
+            <declare name="code2" type="String" array="False" size=""/>
+            <assign variable="code2" expression="&quot;rood&quot;"/>
+            <declare name="code3" type="String" array="False" size=""/>
+            <assign variable="code3" expression="&quot;oranje&quot;"/>
+            <declare name="code4" type="String" array="False" size=""/>
+            <assign variable="code4" expression="&quot;paars&quot;"/>
+            <comment text="Coderaader"/>
+            <declare name="user1" type="String" array="False" size=""/>
+            <declare name="user2" type="String" array="False" size=""/>
+            <declare name="user3" type="String" array="False" size=""/>
+            <declare name="user4" type="String" array="False" size=""/>
+            <declare name="rondes" type="Integer" array="False" size=""/>
+            <assign variable="rondes" expression="10"/>
+            <for variable="rondes" start="9" end="0" direction="dec" step="1">
+                <declare name="cor1" type="String" array="False" size=""/>
+                <input variable="user1"/>
+                <declare name="cor2" type="String" array="False" size=""/>
+                <input variable="user2"/>
+                <declare name="cor3" type="String" array="False" size=""/>
+                <input variable="user3"/>
+                <declare name="cor4" type="String" array="False" size=""/>
+                <input variable="user4"/>
+                <if expression="user1 = code1 || user1 = code2 || user1 = code3 || user1 = code4">
+                    <then>
+                        <if expression="user1 = code1">
+                            <then>
+                                <assign variable="cor1" expression="&quot;zwart,&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="cor1" expression="&quot;wit,&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="cor1" expression="&quot;fout,&quot;"/>
+                    </else>
+                </if>
+                <if expression="user2 = code1 || user2 = code2 || user2 = code3 || user2 = code4">
+                    <then>
+                        <if expression="user2 = code2">
+                            <then>
+                                <assign variable="cor2" expression="&quot;zwart,&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="cor2" expression="&quot;wit,&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="cor2" expression="&quot;fout,&quot;"/>
+                    </else>
+                </if>
+                <if expression="user3 = code1 || user3 = code2 || user3 = code3 || user3 = code4">
+                    <then>
+                        <if expression="user3 = code3">
+                            <then>
+                                <assign variable="cor3" expression="&quot;zwart,&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="cor3" expression="&quot;wit,&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="cor3" expression="&quot;fout,&quot;"/>
+                    </else>
+                </if>
+                <if expression="user4 = code1 || user4 = code2 || user4 = code3 || user4 = code4">
+                    <then>
+                        <if expression="user4 = code4">
+                            <then>
+                                <assign variable="cor4" expression="&quot;zwart,&quot;"/>
+                            </then>
+                            <else>
+                                <assign variable="cor4" expression="&quot;wit,&quot;"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="cor4" expression="&quot;fout,&quot;"/>
+                    </else>
+                </if>
+                <output expression="cor1 &amp; cor2 &amp; cor3 &amp; cor4" newline="True"/>
+                <if expression="cor1=&quot;zwart,&quot; and cor2=&quot;zwart,&quot; and cor3=&quot;zwart,&quot; and cor4=&quot;zwart,&quot;">
+                    <then>
+                        <assign variable="rondes" expression="-11"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;You got this&quot;" newline="True"/>
+                    </else>
+                </if>
+            </for>
+            <if expression="rondes&gt;=-1">
+                <then>
+                    <output expression="&quot;doedoe&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;You win&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
